@@ -1,0 +1,8 @@
+====================
+dataset agnews	temp 0	seed 144	verb manual	select 12	truncate -1.0	sumprob False	model distilroberta-base	
+Acc: 0.5081578947368421
+
+Matthew's Corr: 0.4167603936089474
+
+F1: 0.7449281071498917
+
