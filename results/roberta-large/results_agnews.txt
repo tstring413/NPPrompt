@@ -1,0 +1,8 @@
+====================
+dataset agnews	temp 0	seed 144	verb ept	select 12	truncate -1.0	sumprob False	model roberta-large	
+Acc: 0.85
+
+Matthew's Corr: 0.8011716362600827
+
+F1: 0.9622641509433962
+
