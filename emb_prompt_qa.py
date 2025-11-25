@@ -37,7 +37,7 @@ parser.add_argument("--write_filter_record", default=True, action="store_true")
 args = parser.parse_args()
 
 set_seed(args.seed)
-use_cuda = True
+use_cuda = False
 plm, tokenizer, model_config, WrapperClass = load_plm(args.model, args.model_name_or_path)
 
 dataset = {}
@@ -49,7 +49,7 @@ if args.dataset == "agnews":
     scriptformat = "txt"
     cutoff = 0.5 if (not args.nocut) else 0.0
     max_seq_l = 128
-    batch_s = 800
+    batch_s = 8
     num_labels = [i for i in range(4)]
 elif args.dataset == "dbpedia":
     dataset['train'] = DBpediaProcessor().get_train_examples(f"{args.openprompt_path}/datasets/TextClassification/dbpedia/")

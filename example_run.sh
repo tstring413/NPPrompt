@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export HF_ENDPOINT=https://hf-mirror.com
 PYTHONPATH=python3
 BASEPATH="./"
 DATASET=agnews #agnews(0) dbpedia(0) imdb(3) amazon(3) yahoo(2) sst2(0) mnli-m(0) mnli-mm(0) cola(0)
@@ -23,7 +23,8 @@ mkdir -p "results/$MODEL_NAME_OR_PATH"
 
 i=12
 
-CUDA_VISIBLE_DEVICES=4 $PYTHONPATH emb_prompt.py \
+#CUDA_VISIBLE_DEVICES=4 
+$PYTHONPATH emb_prompt.py \
         --model $MODEL \
         --model_name_or_path $MODEL_NAME_OR_PATH \
         --result_file "results/$MODEL_NAME_OR_PATH/results_$DATASET.txt" \
